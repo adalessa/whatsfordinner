@@ -7703,6 +7703,13 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 exports.default = {
     data: function data() {
@@ -7733,11 +7740,11 @@ exports.default = {
   return _c(
     "div",
     {
-      staticClass: "container mx-auto flex flex-col items-center",
+      staticClass: "container mx-auto flex flex-col items-center h-full mt-10",
       attrs: { id: "app" }
     },
     [
-      _c("h1", { staticClass: "my-4" }, [_vm._v("What's for dinner?")]),
+      _c("h2", { staticClass: "my-10" }, [_vm._v("What's for dinner?")]),
       _vm._v(" "),
       _c(
         "button",
@@ -7749,10 +7756,22 @@ exports.default = {
       ),
       _vm._v(" "),
       _vm.eleccion
-        ? _c("div", { staticClass: "my-4" }, [
+        ? _c("div", { staticClass: "my-10 text-green-dark" }, [
             _vm._v("The Dinner is " + _vm._s(_vm.eleccion))
           ])
-        : _vm._e()
+        : _c("div", { staticClass: "my-10" }, [_vm._v("Food not choosed")]),
+      _vm._v(" "),
+      _c("div", [
+        _c("div", { staticClass: "mb-4 font-bold" }, [_vm._v("Plates: ")]),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "list-reset" },
+          _vm._l(_vm.comidas, function(comida) {
+            return _c("li", [_vm._v(_vm._s(comida))])
+          })
+        )
+      ])
     ]
   )
 }
@@ -7837,7 +7856,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '51987' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52359' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
