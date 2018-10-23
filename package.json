@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-hot-reload-api": "^2.3.1"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.3.0",
+    "cssnano": "^4.1.7",
+    "tailwind": "^2.4.0",
+    "tailwindcss": "^0.6.6",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
